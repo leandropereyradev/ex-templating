@@ -56,3 +56,6 @@
 
 ## Iteración 6 (BONUS)
 - Borrar tweet! =D
+
+## Iteración 7 (BONUS)
+- Trasnformar el array de tweets en un servicio con promesas (como el notes.service de https://github.com/IronPTSolutions/ex-notes)
