@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const logger = require('morgan');
 
@@ -9,17 +8,14 @@ const app = express();
 // Iteration 1: setup hbs as view engine
 require('./config/hbs.config');
 
+app.use(logger('dev'));
+
 // Iteration 5: configure body parser
 
 // Iteration 2: configure global template vars (res.locals.*)
 
-// Configure router
-const router = require('./config/routes.config');
-app.use('/', router);
+// Iteration 1: configure router
 
-app.use(logger('dev'));
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.info(`App listening at port ${port}`);
-})
+app.listen(port, () => console.info(`App listening at port ${port}`))

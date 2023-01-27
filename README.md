@@ -26,13 +26,17 @@
 ##  Iteración 2
 - Configurar las vistas parciales de hbs en `hbs.config.js`
 - Refactorizar tanto la barra de navegación como el footer usando vistas parciales `{{> navbar}}` `{{> footer}}`
-- Crear un helper de hbs para activar las rutas de la barra de navegación:
+- Crear un helper de hbs para activar las rutas de la barra de navegación (lo haremos en clase):
   - Registrar el helper en `hbs.config.js`
   - Tendrá 2 argumentos, el path actual (configurar res.locals.path en app.js) y la palabra que tiene que contener para que se active esa ruta
   - `{{active path '/' }}`
 
 
 ## Iteración 3
+
+- Definir el modelo de tweet `models/tweet.model.js`, tenéis un ejemplo en `./data/tweets.json`
+- Configurar la conexión con base de datos `./config/db.config.js` y `app.app`
+- Añadir los tweets `./data/tweets.json` a la base de datos a mano
 
 - Crear el controlador de tweets `controllers/tweets.controller.js`
 - Renderizar la vista de `list` en el método list:
