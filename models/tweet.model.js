@@ -1,4 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Iteration 3: define tweet schema
+const tweetSchema = new Schema({
+  user: {
+    type: "String",
+  },
+  message: {
+    type: "String",
+  },
+  createdAt: {
+    type: "String",
+  },
+  fav: {
+    type: "Boolean",
+  },
+});
+
+const Tweet = mongoose.model("Tweet", tweetSchema);
+module.exports = Tweet;
